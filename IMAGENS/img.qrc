@@ -1,0 +1,18 @@
+<RCC>
+  <qresource prefix="Tela principal">
+    <file>sair.jpg</file>
+    <file>robo.jpg</file>
+    <file>naoversenha.png</file>
+    <file>email.png</file>
+    <file>formulario.png</file>
+    <file>Cadastrar.png</file>
+    <file>Editar.png</file>
+    <file>Apagar.png</file>
+    <file>Gerar pdf.png</file>
+    <file>INSS.png</file>
+    <file>Procurar.png</file>
+    <file>Tabelas.png</file>
+    <file>Refresh.png</file>
+    <file>Cadastro.png</file>
+  </qresource>
+</RCC>

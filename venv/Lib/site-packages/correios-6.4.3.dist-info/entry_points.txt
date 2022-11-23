@@ -1,0 +1,3 @@
+[console_scripts]
+update-correios-wsdl = correios.update_wsdl:cli
+
