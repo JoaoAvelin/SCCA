@@ -9,14 +9,17 @@ import os,sys
 import mariadb
 
 from GUI.telacadastro import Ui_telacadastro
+
+# Conectando banco de dados
 banco = mariadb.connect(
     host="127.0.0.1",
     user="root",
     passwd="",
     database="controle_teste"
 )
+# Conectando banco de dados
 
-
+# Configurações tela de cadastro
 class telacadastro(QDialog):
     def __init__(self,*args,**argvs):
         super(telacadastro,self).__init__(*args,**argvs)
@@ -26,15 +29,19 @@ class telacadastro(QDialog):
         self.ui.pushButton_2.clicked.connect(self.can)
         self.ui.pushButton_3.clicked.connect(self.limpar)
         self.ui.pushButton_4.clicked.connect(self.consultacep)
-    def consultacep(self):
+# Configurações tela de cadastro
+
+# Funções
+    def consultacep(self):# Função para consultar o cep
         import requests
         global cp
         global log
         global bai
         global est
         global uf
-        #Pegando cep
+        #Pegando cep inserido pelo usuário
         cp = self.ui.lineEdit_8.text()
+        # Pegando cep inserido pelo usuário
 
         try:
             #Buscando dados do cep informado e preenchendo campos
@@ -59,19 +66,22 @@ class telacadastro(QDialog):
                 print(estado)
                 uf = (format(address_data['uf']))
                 print(uf)
+                # Buscando dados do cep informado e preenchendo campos
 
+                # Preenchendo campos
                 log = self.ui.lineEdit_9.insert(logradouro)
                 bai = self.ui.lineEdit_22.insert(bairro)
                 est = self.ui.lineEdit_21.insert(estado)
                 uf = self.ui.lineEdit_10.insert(uf)
+                # Preenchendo campos
         except:
             QMessageBox.warning(QMessageBox(), 'Alerta', 'Campo vazio ou cep incorreto!!!')
 
-    def add(self):
+    def add(self):# Função de cadastro
 
 
 
-        #Preenchendo campos do Qtdesigner
+        # Preenchendo campos do Qtdesigner
         nb = self.ui.lineEdit.text()
         acont = self.ui.lineEdit_2.text()
         font_acao = self.ui.lineEdit_3.text()
@@ -95,9 +105,9 @@ class telacadastro(QDialog):
         data_enter = self.ui.lineEdit_17.text()
         data_calc = self.ui.lineEdit_18.text()
         reg = self.ui.lineEdit_23.text()
+        # Preenchendo campos do Qtdesigner
 
-
-        #Inserindo dados dos campos no BD
+        # Inserindo dados dos campos no BD
         cursor = banco.cursor()
         comando_SQL = "INSERT INTO beneficio (NUMERO_BENEFICIO, TIPO_DE_ACONTECIMENTO, FONTE_DE_ACAO, ESPECIE, NUMERO_PROTOCOLO, NOME_SEGURADO, CPF_SEGURADO, NIT, CEP, RUA,BAIRRO, ESTADO, MUNICIPIO, NOME_RESPONSAVEL, CPF_CNPJ_RESPONSAVEL, VALOR_DIVIDA, VALOR_CALCULADO, VALOR_DE_ENTRADA, PARCELAS_PAGAS, TOTAL_DE_PARCELAS, DATA_DA_COBRANÇA, DATA_DO_CALCULO, REGRESSIVA) VALUES(%s, %s, %s, %s, %s, %s, %s, %s, %s, %s,%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s)"
 
@@ -105,15 +115,16 @@ class telacadastro(QDialog):
 
         cursor.execute(comando_SQL, valores)
         banco.commit()
-
+        # Inserindo dados dos campos no BD
         print("\033[36mDados enviados com sucesso\033[m")
         QMessageBox.information(QMessageBox(),"SUCESSO", "Dados inseridos com sucesso!!!")
-    def can(self):
+
+    def can(self):# Função fechar tela de cadastro
         #Fechando Tela Cadastro
         print("\033[31mFechando tela de cadastro\033[m")
 
         self.close()
-    def limpar(self):
+    def limpar(self):# Função para limpar campos
         #Limpando Campos
         print("\033[36mCampos limpos\033[m")
 
@@ -140,3 +151,5 @@ class telacadastro(QDialog):
         self.ui.lineEdit_21.setText("")
         self.ui.lineEdit_22.setText("")
         self.ui.lineEdit_23.setText("")
+        # Limpando Campos
+# Funções

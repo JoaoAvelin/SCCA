@@ -54,7 +54,7 @@ banco = mariadb.connect(
 )
 # Conectando banco de dados controle_teste
 
-# Conectando tela de procura e configurando comandos
+# Configurações da tela de procurar
 class telaprocurar(QDialog):
     def __init__(self,*args,**argvs):
         super(telaprocurar,self).__init__(*args,**argvs)
@@ -65,23 +65,23 @@ class telaprocurar(QDialog):
         self.ui.pushButton_4.clicked.connect(self.can)
         self.ui.pushButton_5.clicked.connect(self.dell)
         self.ui.pushButton_3.clicked.connect(self.ver_pdfs)
-# Conectando tela de procura e configurando comandos
+# Configurações da tela de procurar
 
 # Funções da tela de procurar
 
-    # Pega linha selecionada do banco
+    # Função para pegar linha da tabela
     def pegaselecaodobanco(self):
         return self.ui.tableWidget.currentRow()
-    # Pega linha selecionada do banco
+    # Função para pegar linha da tabela
 
-    # Pega linha selecionada na tabela do Qt
+    # Função para pegar os dados do bd
     def pegaselecaodatabela(self):
         valor = self.ui.tableWidget.item(self.pegaselecaodobanco(), 0)
         return valor.text()
-    # Pega linha selecionada na tabela do Qt
+    # Função para pegar os dados do bd
 
     # Função de exclusão de dados
-    def dell(self):
+    def dell(self):# Função para deletar dados
         #Confirmação de exclusão de dados
         try:
             resposta = QMessageBox.question(self, 'AVISO', "Confirmar exclusão dos dados", QMessageBox.Yes | QMessageBox.No)

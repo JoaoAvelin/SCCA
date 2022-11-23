@@ -14,9 +14,12 @@ from PyQt5 import QtCore, QtGui, QtWidgets
 class Ui_Login(object):
     def setupUi(self, Dialog):
         Dialog.setObjectName("Dialog")
-        Dialog.resize(300, 256)
-        Dialog.setMinimumSize(QtCore.QSize(300, 200))
+        Dialog.resize(300, 200)
+        Dialog.setMinimumSize(QtCore.QSize(300, 150))
         Dialog.setMaximumSize(QtCore.QSize(1000, 1000))
+        icon = QtGui.QIcon()
+        icon.addPixmap(QtGui.QPixmap(":/Tela principal/INSS.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
+        Dialog.setWindowIcon(icon)
         Dialog.setStyleSheet("background-color: rgb(255, 255, 255);")
         self.verticalLayout_2 = QtWidgets.QVBoxLayout(Dialog)
         self.verticalLayout_2.setContentsMargins(0, 0, 0, 0)
@@ -150,7 +153,7 @@ class Ui_Login(object):
 
     def retranslateUi(self, Dialog):
         _translate = QtCore.QCoreApplication.translate
-        Dialog.setWindowTitle(_translate("Dialog", "Dialog"))
+        Dialog.setWindowTitle(_translate("Dialog", "SCCA"))
         self.label.setText(_translate("Dialog", "SISTEMA INSS"))
         self.lineEdit.setPlaceholderText(_translate("Dialog", "Matricula"))
         self.lineEdit_2.setPlaceholderText(_translate("Dialog", "Senha"))

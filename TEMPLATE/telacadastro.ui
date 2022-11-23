@@ -11,7 +11,11 @@
    </rect>
   </property>
   <property name="windowTitle">
-   <string>Dialog</string>
+   <string>SCCA</string>
+  </property>
+  <property name="windowIcon">
+   <iconset resource="../IMAGENS/img.qrc">
+    <normaloff>:/Tela principal/INSS.png</normaloff>:/Tela principal/INSS.png</iconset>
   </property>
   <widget class="QLabel" name="label">
    <property name="geometry">

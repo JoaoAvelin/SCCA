@@ -11,7 +11,11 @@
    </rect>
   </property>
   <property name="windowTitle">
-   <string>MainWindow</string>
+   <string>SCCA</string>
+  </property>
+  <property name="windowIcon">
+   <iconset resource="../IMAGENS/img.qrc">
+    <normaloff>:/Tela principal/INSS.png</normaloff>:/Tela principal/INSS.png</iconset>
   </property>
   <property name="styleSheet">
    <string notr="true">background-color: rgb(255, 255, 255);

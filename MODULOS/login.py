@@ -25,6 +25,7 @@ banco = mariadb.connect(
     database="controle_teste"
 )
 
+# Configurações da tela de login
 class login(QDialog):
     def __init__(self, *args,**argvs):
         super(login,self).__init__(*args,**argvs)
@@ -32,22 +33,25 @@ class login(QDialog):
         self.ui.setupUi(self)
         self.ui.pushButton.clicked.connect(self.entra)
         self.ui.pushButton_2.clicked.connect(self.sair)
+# Configurações da tela de login
 
-
-    def entra(self):
+# Funções
+    def entra(self):# Função para entrar no sistema
         global user
 
 
         #Conferindo user e senha
         try:
-
+            #  Recebe dados inseridos pelo usuário
             user = self.ui.lineEdit.text()
             passwd = self.ui.lineEdit_2.text()
+            #  Recebe dados inseridos pelo usuário
 
+            # Pega senha do banco através da matricula do usuario
             cursor = banco.cursor()
             cursor.execute("SELECT password FROM login WHERE matricula = '{}'".format(user))
             senha_bd = cursor.fetchall()[0][0]
-            print(senha_bd)
+            # Pega senha do banco através da matricula do usuario
 
             if passwd == senha_bd:
                 # Validando entrada no sistema
@@ -56,34 +60,39 @@ class login(QDialog):
                 self.window = telaprincipal(self.label_5)
                 self.window.show()
                 self.hide()
+                # Validando entrada no sistema
+
                 # CRIANDO PASTA GUIAS
                 import os.path
                 import os, sys
-
-                if os.path.isdir("C:\GUIAS"):  # vemos se este diretorio ja existe
+                # Vemos se este diretorio ja existe
+                if os.path.isdir("C:\GUIAS"):
                     print('Ja existe uma pasta com esse nome!')
+                # Vemos se este diretorio ja existe
 
+                # Criamos a pasta caso nao exista
                 else:
-                    os.mkdir("C:\GUIAS")  # aqui criamos a pasta caso nao exista
+                    os.mkdir("C:\GUIAS")
                     QMessageBox.information(QMessageBox(), "AVISO",
                                             "PRIMEIRO LOGIN EFETUADO!!! \n Foi criado uma pasta para armazenamento das guias no diretório \n C:\GUIAS")
-                print("\033[36mEntrando na tela principal\033[m")
+                #  Criamos a pasta caso nao exista
 
-
-
-
+                # CRIANDO PASTA GUIAS
             else:
+                # Informa se a senha for invalida
                 QMessageBox.warning(QMessageBox(), "ALERTA", "Senha invalida!!!")
-
+                # Informa se a senha for invalida
         except:
+            # Informa se o usuário está vazio
             QMessageBox.warning(QMessageBox(), "ALERTA", "Usuário ou/a senha invalida!!!")
+            # Informa se o usuário está vazio
+        # Conferindo user e senha
 
-
-    def sair(self):
-        print("\033[31mFechando o sistema\033[m")
+    def sair(self):# Função para fechar tela de login
+        # Fechando tela de login
         self.close()
-
-
+        # Fechando tela de login
+# Funções
 
 
 

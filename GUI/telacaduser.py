@@ -17,6 +17,9 @@ class UI_telacaduser(object):
         Dialog.resize(400, 300)
         Dialog.setMinimumSize(QtCore.QSize(400, 300))
         Dialog.setMaximumSize(QtCore.QSize(400, 300))
+        icon = QtGui.QIcon()
+        icon.addPixmap(QtGui.QPixmap(":/Tela principal/INSS.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
+        Dialog.setWindowIcon(icon)
         Dialog.setStyleSheet("background-color: rgb(255, 255, 255);")
         self.verticalLayout = QtWidgets.QVBoxLayout(Dialog)
         self.verticalLayout.setContentsMargins(0, 0, 0, 0)
@@ -111,8 +114,6 @@ class UI_telacaduser(object):
 "QLineEdit:focus { \n"
 "    border: 3px solid rgb(255, 255, 0);\n"
 "}")
-        self.lineEdit.setText("")
-        self.lineEdit.setEchoMode(QtWidgets.QLineEdit.Password)
         self.lineEdit.setObjectName("lineEdit")
         self.noFrame.setWidget(2, QtWidgets.QFormLayout.FieldRole, self.lineEdit)
         self.frame_2 = QtWidgets.QFrame(self.frame_3)
@@ -177,7 +178,7 @@ class UI_telacaduser(object):
 
     def retranslateUi(self, Dialog):
         _translate = QtCore.QCoreApplication.translate
-        Dialog.setWindowTitle(_translate("Dialog", "Dialog"))
+        Dialog.setWindowTitle(_translate("Dialog", "SCCA"))
         self.lineEdit_2.setPlaceholderText(_translate("Dialog", "Matrícula"))
         self.lineEdit_3.setPlaceholderText(_translate("Dialog", "Senha"))
         self.lineEdit.setPlaceholderText(_translate("Dialog", "Confirme a Senha"))
@@ -190,7 +191,7 @@ if __name__ == "__main__":
     import sys
     app = QtWidgets.QApplication(sys.argv)
     Dialog = QtWidgets.QDialog()
-    ui = Ui_Login()
+    ui = UI_telacaduser()
     ui.setupUi(Dialog)
     Dialog.show()
     sys.exit(app.exec_())

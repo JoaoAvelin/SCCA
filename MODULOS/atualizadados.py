@@ -10,14 +10,16 @@ import mariadb
 
 from GUI.telatualizar import Ui_atualizar
 
-
+# Conectando banco de dados
 banco = mariadb.connect(
     host="127.0.0.1",
     user="root",
     passwd="",
     database="controle_teste"
 )
+# Conectando banco de dados
 
+# Configurações tela de atualizar dados
 class telaatualizar(QDialog):
     def __init__(self, *args,**argvs):
         super(telaatualizar,self).__init__(*args,**argvs)
@@ -27,11 +29,16 @@ class telaatualizar(QDialog):
         self.ui.pushButton_3.clicked.connect(self.limpar)
         self.ui.pushButton_2.clicked.connect(self.sair)
         self.ui.pushButton_4.clicked.connect(self.busca)
+# Configurações tela de atualizar dados
 
-    def inserirdados(self):
-        #Inserindo dados nos campos
+# Funções
+    def inserirdados(self):# Função para atualizar beneficio
 
+        # Pega o id inserido pelo usuário
             ID = self.ui.lineEdit_22.text()
+        # Pega o id inserido pelo usuário
+
+        # Preenche os campos
             try:
                 nome_s = self.ui.lineEdit_6.text()
                 num_bene = self.ui.lineEdit.text()
@@ -56,21 +63,28 @@ class telaatualizar(QDialog):
                 data_cobra = self.ui.lineEdit_17.text()
                 data_calc = self.ui.lineEdit_18.text()
                 acao_reg = self.ui.lineEdit_24.text()
+                # Preenche os campos
 
-                #Buscando dados do beneficio informado
+                # Atualiza os dados através dos dados fornecidos nos campos
                 cursor = banco.cursor()
                 sql = f"UPDATE beneficio SET NUMERO_BENEFICIO= '{num_bene}', NOME_SEGURADO= '{nome_s}', TIPO_DE_ACONTECIMENTO= '{tipo_acon}',FONTE_DE_ACAO= '{fonte_acao}', ESPECIE= '{especie}',NUMERO_PROTOCOLO= '{numero_p}',CPF_SEGURADO= '{cpf_seg}',NIT= '{niit}',CEP= '{cep}',RUA= '{rua}',ESTADO= '{estado}',MUNICIPIO= '{municipio}',BAIRRO= '{bairro}',NOME_RESPONSAVEL= '{nome_r}',CPF_CNPJ_RESPONSAVEL= '{cpf_cpnj_r}',VALOR_DIVIDA= '{valor_d}',VALOR_CALCULADO= '{valor_c}',VALOR_DE_ENTRADA= '{valor_e}',PARCELAS_PAGAS= '{parcelas_p}',TOTAL_DE_PARCELAS= '{t_parcelas}',DATA_DA_COBRANÇA= '{data_cobra}',DATA_DO_CALCULO= '{data_calc}', regressiva='{acao_reg}'  WHERE id ='{ID}'"
                 cursor.execute(sql)
                 banco.commit()
 
                 QMessageBox.information(QMessageBox(), "SUCESSO", "Atualização de dados feita com sucesso")
-
+                # Atualiza os dados através dos dados fornecidos nos campos
             except:
                 QMessageBox.warning(QMessageBox(), "ERRO", "Não foi possivel atualizar dados")
-    def busca(self):
-        #Inserindo dados nos campos automaticamente apartir do beneficio informado
-        ID = self.ui.lineEdit_22.text()
 
+
+    def busca(self):# Função para pesquisar beneficio
+
+
+        # Pega o id inserido pelo usuário
+        ID = self.ui.lineEdit_22.text()
+        # Pega o id inserido pelo usuário
+
+        # Pega os dados do bd através do id informado e preenche os campos
         try:
             cursor = banco.cursor()
             cursor.execute(f"SELECT REGRESSIVA FROM beneficio WHERE id = {ID}")
@@ -186,13 +200,13 @@ class telaatualizar(QDialog):
             cursor.execute(f"SELECT DATA_DO_CALCULO FROM beneficio WHERE id = {ID}")
             data_calc = cursor.fetchall()[0][0]
             data_ca = self.ui.lineEdit_18.insert(data_calc)
-
+        # Pega os dados do bd através do id informado e preenche os campos
 
 
         except:
             QMessageBox.warning(QMessageBox(),"Atenção", "ID Incorreto\nOu não definido!!!")
             return
-    def limpar(self):
+    def limpar(self):# Função para limpar campos
         #Limpando campos
         self.ui.lineEdit.setText("")
         self.ui.lineEdit_2.setText("")
@@ -217,7 +231,11 @@ class telaatualizar(QDialog):
         self.ui.lineEdit_21.setText("")
         self.ui.lineEdit_24.setText("")
         self.ui.lineEdit_23.setText("")
-    def sair(self):
-        self.close()
+        # Limpa campos
 
+    def sair(self):# Função para fechar tela
+        # Fecha tela de atualizar dados
+        self.close()
+        # Fecha tela de atualizar dados
+# Funções
 

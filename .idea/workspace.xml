@@ -4,7 +4,38 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="108925da-95ac-4675-85a4-0a3f77fb091c" name="Changes" comment="" />
+    <list default="true" id="108925da-95ac-4675-85a4-0a3f77fb091c" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GUI/Procurar.py" beforeDir="false" afterPath="$PROJECT_DIR$/GUI/Procurar.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GUI/Telaprincipal.py" beforeDir="false" afterPath="$PROJECT_DIR$/GUI/Telaprincipal.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GUI/login.py" beforeDir="false" afterPath="$PROJECT_DIR$/GUI/login.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GUI/telacadastro.py" beforeDir="false" afterPath="$PROJECT_DIR$/GUI/telacadastro.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GUI/telacaduser.py" beforeDir="false" afterPath="$PROJECT_DIR$/GUI/telacaduser.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GUI/telatualizar.py" beforeDir="false" afterPath="$PROJECT_DIR$/GUI/telatualizar.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MODULOS/atualizadados.py" beforeDir="false" afterPath="$PROJECT_DIR$/MODULOS/atualizadados.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MODULOS/cadastrar.py" beforeDir="false" afterPath="$PROJECT_DIR$/MODULOS/cadastrar.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MODULOS/caduser.py" beforeDir="false" afterPath="$PROJECT_DIR$/MODULOS/caduser.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MODULOS/login.py" beforeDir="false" afterPath="$PROJECT_DIR$/MODULOS/login.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MODULOS/principal.py" beforeDir="false" afterPath="$PROJECT_DIR$/MODULOS/principal.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MODULOS/procurar.py" beforeDir="false" afterPath="$PROJECT_DIR$/MODULOS/procurar.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TEMPLATE/Login.ui" beforeDir="false" afterPath="$PROJECT_DIR$/TEMPLATE/Login.ui" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TEMPLATE/Procurar.ui" beforeDir="false" afterPath="$PROJECT_DIR$/TEMPLATE/Procurar.ui" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TEMPLATE/Telaprincipal.ui" beforeDir="false" afterPath="$PROJECT_DIR$/TEMPLATE/Telaprincipal.ui" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TEMPLATE/telacadastro.ui" beforeDir="false" afterPath="$PROJECT_DIR$/TEMPLATE/telacadastro.ui" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TEMPLATE/telacaduser.ui" beforeDir="false" afterPath="$PROJECT_DIR$/TEMPLATE/telacaduser.ui" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TEMPLATE/telaextra.ui" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TEMPLATE/telatualizar.ui" beforeDir="false" afterPath="$PROJECT_DIR$/TEMPLATE/telatualizar.ui" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/run/Analysis-00.toc" beforeDir="false" afterPath="$PROJECT_DIR$/build/run/Analysis-00.toc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/run/EXE-00.toc" beforeDir="false" afterPath="$PROJECT_DIR$/build/run/EXE-00.toc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/run/PKG-00.toc" beforeDir="false" afterPath="$PROJECT_DIR$/build/run/PKG-00.toc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/run/PYZ-00.pyz" beforeDir="false" afterPath="$PROJECT_DIR$/build/run/PYZ-00.pyz" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/run/PYZ-00.toc" beforeDir="false" afterPath="$PROJECT_DIR$/build/run/PYZ-00.toc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/run/base_library.zip" beforeDir="false" afterPath="$PROJECT_DIR$/build/run/base_library.zip" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/run/run.pkg" beforeDir="false" afterPath="$PROJECT_DIR$/build/run/run.pkg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/run/warn-run.txt" beforeDir="false" afterPath="$PROJECT_DIR$/build/run/warn-run.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/run/xref-run.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/run/xref-run.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/run.exe" beforeDir="false" afterPath="$PROJECT_DIR$/dist/run.exe" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
