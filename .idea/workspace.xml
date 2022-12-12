@@ -6,14 +6,9 @@
   <component name="ChangeListManager">
     <list default="true" id="108925da-95ac-4675-85a4-0a3f77fb091c" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/GUI/Procurar.py" beforeDir="false" afterPath="$PROJECT_DIR$/GUI/Procurar.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/GUI/telacadastro.py" beforeDir="false" afterPath="$PROJECT_DIR$/GUI/telacadastro.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MODULOS/atualizadados.py" beforeDir="false" afterPath="$PROJECT_DIR$/MODULOS/atualizadados.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MODULOS/buscardados.py" beforeDir="false" afterPath="$PROJECT_DIR$/MODULOS/buscardados.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MODULOS/cadastrar.py" beforeDir="false" afterPath="$PROJECT_DIR$/MODULOS/cadastrar.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MODULOS/procurar.py" beforeDir="false" afterPath="$PROJECT_DIR$/MODULOS/procurar.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TEMPLATE/telacadastro.ui" beforeDir="false" afterPath="$PROJECT_DIR$/TEMPLATE/telacadastro.ui" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TEMPLATE/telatualizar.ui" beforeDir="false" afterPath="$PROJECT_DIR$/TEMPLATE/telatualizar.ui" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MODULOS/Teste.pdf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/MODULOS/manager.db" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/MODULOS/matriculas.txt" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/build/run/Analysis-00.toc" beforeDir="false" afterPath="$PROJECT_DIR$/build/run/Analysis-00.toc" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/run/EXE-00.toc" beforeDir="false" afterPath="$PROJECT_DIR$/build/run/EXE-00.toc" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/run/PKG-00.toc" beforeDir="false" afterPath="$PROJECT_DIR$/build/run/PKG-00.toc" afterDir="false" />
@@ -21,9 +16,8 @@
       <change beforePath="$PROJECT_DIR$/build/run/PYZ-00.toc" beforeDir="false" afterPath="$PROJECT_DIR$/build/run/PYZ-00.toc" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/run/base_library.zip" beforeDir="false" afterPath="$PROJECT_DIR$/build/run/base_library.zip" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/run/run.pkg" beforeDir="false" afterPath="$PROJECT_DIR$/build/run/run.pkg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/run/warn-run.txt" beforeDir="false" afterPath="$PROJECT_DIR$/build/run/warn-run.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/run/xref-run.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/run/xref-run.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/run.exe" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/code git.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/SCCA.exe" beforeDir="false" afterPath="$PROJECT_DIR$/dist/SCCA.exe" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -56,7 +50,7 @@
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
-  <component name="RunManager" selected="Python.telatualizar">
+  <component name="RunManager" selected="Python.run">
     <configuration name="buscardados" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="INSS1" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -185,8 +179,8 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Python.telatualizar" />
         <item itemvalue="Python.run" />
+        <item itemvalue="Python.telatualizar" />
         <item itemvalue="Python.telacadastro" />
         <item itemvalue="Python.buscardados" />
         <item itemvalue="Python.login" />
