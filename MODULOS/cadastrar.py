@@ -40,7 +40,7 @@ class telacadastro(QDialog):
         global est
         global uf
         #Pegando cep inserido pelo usuário
-        cp = self.ui.lineEdit_8.text()
+        cp = self.ui.lineEdit_CEP.text()
         # Pegando cep inserido pelo usuário
 
         try:
@@ -69,10 +69,10 @@ class telacadastro(QDialog):
                 # Buscando dados do cep informado e preenchendo campos
 
                 # Preenchendo campos
-                log = self.ui.lineEdit_9.insert(logradouro)
-                bai = self.ui.lineEdit_22.insert(bairro)
-                est = self.ui.lineEdit_21.insert(estado)
-                uf = self.ui.lineEdit_10.insert(uf)
+                log = self.ui.lineEdit_RUA.insert(logradouro)
+                bai = self.ui.lineEdit_BAI.insert(bairro)
+                est = self.ui.lineEdit_EST.insert(estado)
+                uf = self.ui.lineEdit_MUN.insert(uf)
                 # Preenchendo campos
         except:
             QMessageBox.warning(QMessageBox(), 'Alerta', 'Campo vazio ou cep incorreto!!!')
@@ -82,29 +82,29 @@ class telacadastro(QDialog):
 
 
         # Preenchendo campos do Qtdesigner
-        nb = self.ui.lineEdit.text()
-        acont = self.ui.lineEdit_2.text()
-        font_acao = self.ui.lineEdit_3.text()
-        esp = self.ui.lineEdit_4.text()
-        np = self.ui.lineEdit_5.text()
-        nom_seg = self.ui.lineEdit_6.text()
-        cpf_seg = self.ui.lineEdit_7.text()
-        cp = self.ui.lineEdit_8.text()
-        log = self.ui.lineEdit_9.text()
-        bai = self.ui.lineEdit_22.text()
-        est = self.ui.lineEdit_21.text()
-        uf = self.ui.lineEdit_10.text()
-        ni = self.ui.lineEdit_16.text()
-        nom_resp = self.ui.lineEdit_11.text()
-        cpf_cnpj = self.ui.lineEdit_12.text()
-        val_div = self.ui.lineEdit_13.text()
-        val_calc = self.ui.lineEdit_14.text()
-        val_enter = self.ui.lineEdit_15.text()
-        all_parcelas = self.ui.lineEdit_19.text()
-        parc_pagas = self.ui.lineEdit_20.text()
-        data_enter = self.ui.lineEdit_17.text()
-        data_calc = self.ui.lineEdit_18.text()
-        reg = self.ui.lineEdit_23.text()
+        nb = self.ui.lineEdit_NB.text()
+        acont = self.ui.lineEdit_TDA.text()
+        font_acao = self.ui.lineEdit_FDA.text()
+        esp = self.ui.lineEdit_ESP.text()
+        np = self.ui.lineEdit_NDP.text()
+        nom_seg = self.ui.lineEdit_NS.text()
+        cpf_seg = self.ui.lineEdit_CPF.text()
+        cp = self.ui.lineEdit_CEP.text()
+        log = self.ui.lineEdit_RUA.text()
+        bai = self.ui.lineEdit_BAI.text()
+        est = self.ui.lineEdit_EST.text()
+        uf = self.ui.lineEdit_MUN.text()
+        ni = self.ui.lineEdit_NIT.text()
+        nom_resp = self.ui.lineEdit_NP.text()
+        cpf_cnpj = self.ui.lineEdit_CNPJ.text()
+        val_div = self.ui.lineEdit_VD.text()
+        val_calc = self.ui.lineEdit_VC.text()
+        val_enter = self.ui.lineEdit_VE.text()
+        all_parcelas = self.ui.lineEdit_TP.text()
+        parc_pagas = self.ui.lineEdit_PP.text()
+        data_enter = self.ui.lineEdit_DC.text()
+        data_calc = self.ui.lineEdit_DDC.text()
+        reg = self.ui.lineEdit_AR.text()
         # Preenchendo campos do Qtdesigner
 
         # Inserindo dados dos campos no BD
@@ -128,28 +128,28 @@ class telacadastro(QDialog):
         #Limpando Campos
         print("\033[36mCampos limpos\033[m")
 
-        self.ui.lineEdit.setText("")
-        self.ui.lineEdit_2.setText("")
-        self.ui.lineEdit_3.setText("")
-        self.ui.lineEdit_4.setText("")
-        self.ui.lineEdit_5.setText("")
-        self.ui.lineEdit_6.setText("")
-        self.ui.lineEdit_7.setText("")
-        self.ui.lineEdit_16.setText("")
-        self.ui.lineEdit_8.setText("")
-        self.ui.lineEdit_9.setText("")
-        self.ui.lineEdit_10.setText("")
-        self.ui.lineEdit_11.setText("")
-        self.ui.lineEdit_12.setText("")
-        self.ui.lineEdit_13.setText("")
-        self.ui.lineEdit_14.setText("")
-        self.ui.lineEdit_15.setText("")
-        self.ui.lineEdit_17.setText("")
-        self.ui.lineEdit_18.setText("")
-        self.ui.lineEdit_19.setText("")
-        self.ui.lineEdit_20.setText("")
-        self.ui.lineEdit_21.setText("")
-        self.ui.lineEdit_22.setText("")
-        self.ui.lineEdit_23.setText("")
+        self.ui.lineEdit_NB.setText("")
+        self.ui.lineEdit_TDA.setText("")
+        self.ui.lineEdit_FDA.setText("")
+        self.ui.lineEdit_ESP.setText("")
+        self.ui.lineEdit_NDP.setText("")
+        self.ui.lineEdit_NS.setText("")
+        self.ui.lineEdit_CPF.setText("")
+        self.ui.lineEdit_CEP.setText("")
+        self.ui.lineEdit_RUA.setText("")
+        self.ui.lineEdit_BAI.setText("")
+        self.ui.lineEdit_MUN.setText("")
+        self.ui.lineEdit_EST.setText("")
+        self.ui.lineEdit_NP.setText("")
+        self.ui.lineEdit_CNPJ.setText("")
+        self.ui.lineEdit_NIT.setText("")
+        self.ui.lineEdit_VD.setText("")
+        self.ui.lineEdit_VC.setText("")
+        self.ui.lineEdit_VE.setText("")
+        self.ui.lineEdit_TP.setText("")
+        self.ui.lineEdit_PP.setText("")
+        self.ui.lineEdit_DC.setText("")
+        self.ui.lineEdit_DDC.setText("")
+        self.ui.lineEdit_AR.setText("")
         # Limpando Campos
 # Funções

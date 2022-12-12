@@ -145,7 +145,7 @@ class telaprocurar(QDialog):
     # Função para gerar o PDF
     def gerarpdf(self):
 
-        try:
+       # try:
             from datetime import date
             from datetime import datetime
             from datetime import timedelta
@@ -234,14 +234,18 @@ class telaprocurar(QDialog):
             cursor = banco.cursor()
             cursor.execute(f"SELECT TOTAL_DE_PARCELAS FROM beneficio WHERE NUMERO_BENEFICIO = {tablename}")
             total_parcelas_calc = cursor.fetchall()[0][0]
+            cursor.execute(f"SELECT VALOR_DE_ENTRADA  FROM beneficio WHERE NUMERO_BENEFICIO = {tablename}")
+            valor_entrada = cursor.fetchall()[0][0]
             # Função para pegar o valor do banco de dados e fazer o calculo com a taxa pega em HTML
 
             # Calculo para descobrir o valor das parcelas
+            valor_entrada_float = int(valor_entrada)
             total_parcelas_calc_float = float(total_parcelas_calc)
-            valor_float = float(valor)
+            valor_float = int(valor)
 
-            valor_parcela = valor_float / total_parcelas_calc_float
-            print("Valor sem juros: R$", f'{valor_float:.2f}')
+            valor_total = valor_float - valor_entrada_float
+            valor_parcela = valor_total / total_parcelas_calc_float
+            print("Valor sem juros: R$", f'{valor_total:.2f}')
             print("Valor da Parcela: R$", f'{valor_parcela:.2f}')
             # Calculo para descobrir o valor das parcelas
 
@@ -300,6 +304,7 @@ class telaprocurar(QDialog):
             total_parcelas = cursor.fetchall()[0][0]
             cursor.execute(f"SELECT PARCELAS_PAGAS FROM beneficio WHERE NUMERO_BENEFICIO = {tablename}")
             parcelas_pagas = cursor.fetchall()[0][0]
+
 
             # Conferindo se as parcelas foram pagas e aumentando o numero de parcelas pagas
             parcelas_pagas_format = parcelas_pagas
@@ -432,8 +437,8 @@ class telaprocurar(QDialog):
             banco.commit()
 
             QMessageBox.information(QMessageBox(),'SUCESSO', 'PDF Gerado com sucesso!')
-        except:
-            QMessageBox.warning(QMessageBox(), 'Alerta', 'Não foi possivel gerar pdf')
+       # except:
+          #  QMessageBox.warning(QMessageBox(), 'Alerta', 'Não foi possivel gerar pdf')
     # Função para gerar o PDF
 
 # Função para ver todos os pdfs gerados

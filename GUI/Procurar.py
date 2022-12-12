@@ -31,6 +31,9 @@ class Ui_procurar(object):
         self.pushButton = QtWidgets.QPushButton(Dialog)
         self.pushButton.setGeometry(QtCore.QRect(180, 70, 75, 21))
         self.pushButton.setObjectName("pushButton")
+        self.lineEdit_2 = QtWidgets.QLineEdit(Dialog)
+        self.lineEdit_2.setGeometry(QtCore.QRect(270, 70, 111, 20))
+        self.lineEdit_2.setObjectName("lineEdit_2")
         self.label_3 = QtWidgets.QLabel(Dialog)
         self.label_3.setGeometry(QtCore.QRect(0, 69, 501, 331))
         self.label_3.setStyleSheet("background-color: rgb(167, 167, 167);")
@@ -116,13 +119,11 @@ class Ui_procurar(object):
         self.pushButton_3 = QtWidgets.QPushButton(Dialog)
         self.pushButton_3.setGeometry(QtCore.QRect(140, 370, 111, 23))
         self.pushButton_3.setObjectName("pushButton_3")
-        self.lineEdit_2 = QtWidgets.QLineEdit(Dialog)
-        self.lineEdit_2.setGeometry(QtCore.QRect(270, 70, 111, 20))
-        self.lineEdit_2.setObjectName("lineEdit_2")
         self.label_3.raise_()
         self.label.raise_()
         self.lineEdit.raise_()
         self.pushButton.raise_()
+        self.lineEdit_2.raise_()
         self.pushButton_2.raise_()
         self.pushButton_4.raise_()
         self.label_6.raise_()
@@ -130,7 +131,7 @@ class Ui_procurar(object):
         self.tableWidget.raise_()
         self.pushButton_5.raise_()
         self.pushButton_3.raise_()
-        self.lineEdit_2.raise_()
+
 
         self.retranslateUi(Dialog)
         QtCore.QMetaObject.connectSlotsByName(Dialog)
@@ -141,6 +142,7 @@ class Ui_procurar(object):
         self.label.setText(_translate("Dialog", "                     Procurar Dados "))
         self.lineEdit.setPlaceholderText(_translate("Dialog", "Digite o NB"))
         self.pushButton.setText(_translate("Dialog", "BUSCAR"))
+        self.lineEdit_2.setPlaceholderText(_translate("Dialog", "Digite sua Matricula"))
         item = self.tableWidget.horizontalHeaderItem(0)
         item.setText(_translate("Dialog", "ID"))
         item = self.tableWidget.horizontalHeaderItem(1)
@@ -186,7 +188,7 @@ class Ui_procurar(object):
         item = self.tableWidget.horizontalHeaderItem(21)
         item.setText(_translate("Dialog", "Data do Calculo"))
         self.pushButton_3.setText(_translate("Dialog", "Ver PDFs Gerados"))
-        self.lineEdit_2.setPlaceholderText(_translate("Dialog", "Digite sua Matricula"))
+
 import IMAGENS.img
 import IMAGENS.imagens
 
