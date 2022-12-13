@@ -54,4 +54,4 @@ João Vitor Avelino Geraldo :rocket:
 Feito por João Vitor Avelino :dart: Entre em contato :wave:
 
 - Email: joao.avelino2002@gmail.com
-- Linkedin: João Vitor Avelino Geraldo
+- Linkedin: [João Vitor Avelino Geraldo](https://www.linkedin.com/in/jo%C3%A3o-vitor-avelino-geraldo-8ba247160)
