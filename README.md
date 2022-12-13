@@ -27,7 +27,7 @@ e para o armazenamento dos dados o [XAMPP](https://www.apachefriends.org/pt_br/d
 :inbox_tray:
 Para instação desse código primeiro clone o git utilizando 
 
-$ git clone <https://github.com/JoaoAvelin/SCCA->
+$ git clone <https://github.com/JoaoAvelin/SCCA>
 
 Após isso no diretório que foi clonado você encontrará um arquivo SQL chamado controle_teste, você devera ligar o XAMPP habilitar o APACHE e o MySQL,
 depois você vai criar uma base de dados chamado controle_teste com agrupamento (utf8mb4_general_ci), e importar o controle_teste que se encontra
